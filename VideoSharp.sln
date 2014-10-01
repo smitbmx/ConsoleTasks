@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Integers", "VideoSharp\Integers.csproj", "{BA580578-3CAA-41E2-8572-624CFFE57BFC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WarmUp", "WarmUp\WarmUp.csproj", "{E3F4282B-4611-422B-AA4F-1D567C03122F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Strings", "Strings\Strings.csproj", "{FFA884B4-8E21-4698-8803-349E64FF4AE4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BA580578-3CAA-41E2-8572-624CFFE57BFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA580578-3CAA-41E2-8572-624CFFE57BFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA580578-3CAA-41E2-8572-624CFFE57BFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA580578-3CAA-41E2-8572-624CFFE57BFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3F4282B-4611-422B-AA4F-1D567C03122F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3F4282B-4611-422B-AA4F-1D567C03122F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3F4282B-4611-422B-AA4F-1D567C03122F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3F4282B-4611-422B-AA4F-1D567C03122F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FFA884B4-8E21-4698-8803-349E64FF4AE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFA884B4-8E21-4698-8803-349E64FF4AE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFA884B4-8E21-4698-8803-349E64FF4AE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFA884B4-8E21-4698-8803-349E64FF4AE4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

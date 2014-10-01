@@ -1,0 +1,6 @@
+D:\Projects\Videosharp\VideoSharp\Strings\bin\Debug\Strings.exe.config
+D:\Projects\Videosharp\VideoSharp\Strings\bin\Debug\Strings.exe
+D:\Projects\Videosharp\VideoSharp\Strings\bin\Debug\Strings.pdb
+D:\Projects\Videosharp\VideoSharp\Strings\obj\Debug\Strings.csprojResolveAssemblyReference.cache
+D:\Projects\Videosharp\VideoSharp\Strings\obj\Debug\Strings.exe
+D:\Projects\Videosharp\VideoSharp\Strings\obj\Debug\Strings.pdb

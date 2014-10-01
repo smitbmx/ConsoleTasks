@@ -1,0 +1,6 @@
+D:\Projects\Videosharp\VideoSharp\WarmUp\bin\Debug\WarmUp.exe.config
+D:\Projects\Videosharp\VideoSharp\WarmUp\bin\Debug\WarmUp.exe
+D:\Projects\Videosharp\VideoSharp\WarmUp\bin\Debug\WarmUp.pdb
+D:\Projects\Videosharp\VideoSharp\WarmUp\obj\Debug\WarmUp.csprojResolveAssemblyReference.cache
+D:\Projects\Videosharp\VideoSharp\WarmUp\obj\Debug\WarmUp.exe
+D:\Projects\Videosharp\VideoSharp\WarmUp\obj\Debug\WarmUp.pdb
