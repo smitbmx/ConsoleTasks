@@ -1,6 +1,0 @@
-D:\Projects\Videosharp\VideoSharp\VideoSharp\bin\Debug\VideoSharp.exe.config
-D:\Projects\Videosharp\VideoSharp\VideoSharp\bin\Debug\VideoSharp.exe
-D:\Projects\Videosharp\VideoSharp\VideoSharp\bin\Debug\VideoSharp.pdb
-D:\Projects\Videosharp\VideoSharp\VideoSharp\obj\Debug\VideoSharp.csprojResolveAssemblyReference.cache
-D:\Projects\Videosharp\VideoSharp\VideoSharp\obj\Debug\VideoSharp.exe
-D:\Projects\Videosharp\VideoSharp\VideoSharp\obj\Debug\VideoSharp.pdb
