@@ -16,7 +16,9 @@ namespace Strings
 
             //Copy();
 
-            Split();
+            //Split();
+
+            ToLowerUpper();
 
             Console.ReadLine();
         }
@@ -65,6 +67,14 @@ namespace Strings
             Console.WriteLine(arrWords[2]);
             Console.WriteLine(arrWords[3]);
             Console.WriteLine(arrWords[4]);
+        }
+
+        static void ToLowerUpper()
+        {
+            string a = Console.ReadLine().ToLower();
+            string b = Console.ReadLine().ToLower();
+
+            Console.WriteLine(string.Equals(a, b));
         }
     }
 }
