@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -55,7 +56,7 @@ namespace Strings
         {
             string words = Console.ReadLine();
 
-            string[] arrWords = words.Split(new char[] {' '}, StringSplitOptions.RemoveEmptyEntries);
+            string[] arrWords = words.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
 
             //foreach (string arrWord in arrWords)
             //{
@@ -75,6 +76,22 @@ namespace Strings
             string b = Console.ReadLine().ToLower();
 
             Console.WriteLine(string.Equals(a, b));
+        }
+
+        static void Contains()
+        {
+            string animals = Console.ReadLine().ToLower();
+            string an1 = Console.ReadLine().ToLower();
+            string an2 = Console.ReadLine().ToLower();
+            string an3 = Console.ReadLine().ToLower();
+            string an4 = Console.ReadLine().ToLower();
+            string an5 = Console.ReadLine().ToLower();
+
+            Console.WriteLine(animals.Contains(an1));
+            Console.WriteLine(animals.Contains(an2));
+            Console.WriteLine(animals.Contains(an3));
+            Console.WriteLine(animals.Contains(an4));
+            Console.WriteLine(animals.Contains(an5));
         }
     }
 }
