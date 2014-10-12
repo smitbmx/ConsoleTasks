@@ -19,7 +19,9 @@ namespace Strings
 
             //Split();
 
-            ToLowerUpper();
+            //ToLowerUpper();
+
+            Contains();
 
             Console.ReadLine();
         }
