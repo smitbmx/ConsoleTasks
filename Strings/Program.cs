@@ -21,7 +21,11 @@ namespace Strings
 
             //ToLowerUpper();
 
-            Contains();
+            //Contains();
+
+            //IndexOf();
+
+            Insert();
 
             Console.ReadLine();
         }
@@ -94,6 +98,26 @@ namespace Strings
             Console.WriteLine(animals.Contains(an3));
             Console.WriteLine(animals.Contains(an4));
             Console.WriteLine(animals.Contains(an5));
+        }
+
+        static void IndexOf()
+        {
+            string str = Console.ReadLine();
+            int first = str.IndexOf(' ');
+            int last = str.LastIndexOf(' ');
+
+            Console.WriteLine(string.Concat(first, " ", last));
+        }
+
+        static void Insert()
+        {
+            string str = Console.ReadLine();
+            string word = Console.ReadLine()+ " ";
+
+            int firstWordPosition = str.IndexOf(' ');
+            str = str.Insert(firstWordPosition + 1, word);
+
+            Console.WriteLine(str);
         }
     }
 }
