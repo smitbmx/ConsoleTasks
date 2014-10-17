@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
 using System.Security;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,7 +25,8 @@ namespace Strings
             runMethod -= IndexOf;
             runMethod -= Insert;
             runMethod -= Remove;
-            runMethod += PadLeftRight;
+            runMethod -= PadLeftRight;
+            runMethod += Replace;
 
             runMethod.Invoke();
 
@@ -157,6 +159,14 @@ namespace Strings
             Console.WriteLine(string.Concat(fifth.PadRight(width), fifth.PadLeft(width)));
             Console.WriteLine(string.Concat(sixth.PadRight(width), sixth.PadLeft(width)));
             Console.WriteLine(string.Concat(seventh.PadRight(width), seventh.PadLeft(width)));
+        }
+
+        private static void Replace()
+        {
+            string str = Console.ReadLine();
+            str = str.Replace('A', '$').Replace('O', 'A').Replace('$','O');
+            str = str.Replace('a', '$').Replace('o', 'a').Replace('$', 'o');
+            Console.WriteLine(str);
         }
     }
 }
