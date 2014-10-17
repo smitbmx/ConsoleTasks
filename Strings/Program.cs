@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Security;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,25 +10,30 @@ namespace Strings
 {
     class Program
     {
+        private delegate void RunMethod();
+
         static void Main(string[] args)
         {
-            //Length();
+            RunMethod runMethod = Stub;
+            runMethod -= Length;
+            runMethod -= CompareTo;
+            runMethod -= Copy;
+            runMethod -= Split;
+            runMethod -= ToLowerUpper;
+            runMethod -= Contains;
+            runMethod -= IndexOf;
+            runMethod -= Insert;
+            runMethod -= Remove;
+            runMethod += PadLeftRight;
 
-            //CompareTo();
-
-            //Copy();
-
-            //Split();
-
-            //ToLowerUpper();
-
-            //Contains();
-
-            //IndexOf();
-
-            Insert();
+            runMethod.Invoke();
 
             Console.ReadLine();
+        }
+
+        static void Stub()
+        {
+
         }
 
         static void Length()
@@ -112,12 +118,45 @@ namespace Strings
         static void Insert()
         {
             string str = Console.ReadLine();
-            string word = Console.ReadLine()+ " ";
+            string word = Console.ReadLine() + " ";
 
             int firstWordPosition = str.IndexOf(' ');
             str = str.Insert(firstWordPosition + 1, word);
 
             Console.WriteLine(str);
+        }
+
+        private static void Remove()
+        {
+            string phrase = Console.ReadLine();
+
+            int openBracketPosition = phrase.IndexOf('(');
+            int closeBracketPosition = phrase.IndexOf(')');
+            int countToRemove = closeBracketPosition - openBracketPosition;
+            phrase = phrase.Remove(openBracketPosition + 1, countToRemove - 1);
+
+            Console.WriteLine(phrase);
+        }
+
+        private static void PadLeftRight()
+        {
+            string first = Console.ReadLine();
+            string second = Console.ReadLine();
+            string third = Console.ReadLine();
+            string fourth = Console.ReadLine();
+            string fifth = Console.ReadLine();
+            string sixth = Console.ReadLine();
+            string seventh = Console.ReadLine();
+
+            int width = 8;
+
+            Console.WriteLine(string.Concat(first.PadRight(width), first.PadLeft(width)));
+            Console.WriteLine(string.Concat(second.PadRight(width), second.PadLeft(width)));
+            Console.WriteLine(string.Concat(third.PadRight(width), third.PadLeft(width)));
+            Console.WriteLine(string.Concat(fourth.PadRight(width), fourth.PadLeft(width)));
+            Console.WriteLine(string.Concat(fifth.PadRight(width), fifth.PadLeft(width)));
+            Console.WriteLine(string.Concat(sixth.PadRight(width), sixth.PadLeft(width)));
+            Console.WriteLine(string.Concat(seventh.PadRight(width), seventh.PadLeft(width)));
         }
     }
 }
