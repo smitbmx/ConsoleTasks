@@ -26,7 +26,10 @@ namespace Strings
             runMethod -= Insert;
             runMethod -= Remove;
             runMethod -= PadLeftRight;
-            runMethod += Replace;
+            runMethod -= Replace;
+            runMethod -= Substring;
+            runMethod -= StartsEndsWith;
+            runMethod += TrimStartEnd;
 
             runMethod.Invoke();
 
@@ -164,9 +167,41 @@ namespace Strings
         private static void Replace()
         {
             string str = Console.ReadLine();
-            str = str.Replace('A', '$').Replace('O', 'A').Replace('$','O');
+            str = str.Replace('A', '$').Replace('O', 'A').Replace('$', 'O');
             str = str.Replace('a', '$').Replace('o', 'a').Replace('$', 'o');
             Console.WriteLine(str);
+        }
+
+        private static void Substring()
+        {
+            string str = Console.ReadLine();
+            int firstBracket = str.IndexOf('(');
+            int lastBracket = str.LastIndexOf(')');
+
+            str = str.Substring(firstBracket + 1, lastBracket - firstBracket - 1);
+
+            Console.WriteLine(str);
+        }
+
+        private static void StartsEndsWith()
+        {
+            string str = Console.ReadLine().ToLower();
+            Console.WriteLine(str.StartsWith("hello"));
+            Console.WriteLine(str.EndsWith("."));
+        }
+
+        private static void TrimStartEnd()
+        {
+            string str = Console.ReadLine();
+
+            str = str.Replace("[", "").Replace("]", "");
+            string str1 = str.TrimStart();
+            string str2 = str.TrimEnd();
+            string str3 = str.Trim();
+
+            Console.WriteLine(string.Concat("[", str1, "]"));
+            Console.WriteLine(string.Concat("[", str2, "]"));
+            Console.WriteLine(string.Concat("[", str3, "]"));
         }
     }
 }
