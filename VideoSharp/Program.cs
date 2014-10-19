@@ -14,7 +14,10 @@ namespace VideoSharp
         {
             RunMethod runMethod = Stub;
             runMethod -= Maxima;
-            runMethod = Read;
+            runMethod -= Read;
+            runMethod -= TwoNumbers;
+            runMethod -= Division;
+            runMethod += FiveNumbers;
 
             runMethod.Invoke();
 
@@ -50,6 +53,43 @@ namespace VideoSharp
             thirdDgt = thirdDgt + 1;
 
             Console.WriteLine(string.Concat(firstDgt, " ", secondDgt, " ", thirdDgt));
+        }
+
+        private static void TwoNumbers()
+        {
+            string twoNumbersStr = Console.ReadLine();
+            string[] numbersString = twoNumbersStr.Split(' ');
+            int first = int.Parse(numbersString[0]);
+            int second = int.Parse(numbersString[1]);
+
+            Console.WriteLine(first + second);
+        }
+
+        private static void Division()
+        {
+            long first = long.Parse(Console.ReadLine());
+            long second = long.Parse(Console.ReadLine());
+
+            long full = first / second;
+            long remainder = first % second;
+
+            Console.WriteLine(string.Format("{0} / {1} = {2}", first, second, full));
+            Console.WriteLine(string.Format("{0} % {1} = {2}", first, second, remainder));
+        }
+
+        private static void FiveNumbers()
+        {
+            string[] numbers = Console.ReadLine().Split(' ');
+
+            long sum = 0;
+            //foreach (string number in numbers)
+            //{
+            //    sum += ulong.Parse(number);
+            //}
+
+            sum = long.Parse(numbers[0]) + long.Parse(numbers[1]) + long.Parse(numbers[2]) + long.Parse(numbers[3]) + long.Parse(numbers[4]);
+
+            Console.WriteLine(sum);
         }
     }
 }
