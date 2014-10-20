@@ -17,7 +17,8 @@ namespace VideoSharp
             runMethod -= Read;
             runMethod -= TwoNumbers;
             runMethod -= Division;
-            runMethod += FiveNumbers;
+            runMethod -= FiveNumbers;
+            runMethod += Pyramid;
 
             runMethod.Invoke();
 
@@ -90,6 +91,32 @@ namespace VideoSharp
             sum = long.Parse(numbers[0]) + long.Parse(numbers[1]) + long.Parse(numbers[2]) + long.Parse(numbers[3]) + long.Parse(numbers[4]);
 
             Console.WriteLine(sum);
+        }
+
+        private static void Pyramid()
+        {
+            string[] firstArr = Console.ReadLine().Split(' ').Where(x => !string.IsNullOrEmpty(x)).ToArray();
+            string[] secondArr = Console.ReadLine().Split(' ').Where(x => !string.IsNullOrEmpty(x)).ToArray(); ;
+            string[] thirdArr = Console.ReadLine().Split(' ').Where(x => !string.IsNullOrEmpty(x)).ToArray(); ;
+            string[] fourthArr = Console.ReadLine().Split(' ').Where(x => !string.IsNullOrEmpty(x)).ToArray(); ;
+            string[] ffthArr = Console.ReadLine().Split(' ').Where(x => !string.IsNullOrEmpty(x)).ToArray(); ;
+
+            string first = firstArr[firstArr.Length - 1];
+            string second = secondArr[secondArr.Length - 1];
+            string third = thirdArr[thirdArr.Length - 1];
+            string fourth = fourthArr[fourthArr.Length - 1];
+            string ffth = ffthArr[ffthArr.Length - 1];
+
+            int firstNum, secondNum, thirdNum, fourthNum, ffthNum;
+
+            int.TryParse(first, out firstNum);
+            int.TryParse(second, out secondNum);
+            int.TryParse(third, out thirdNum);
+            int.TryParse(fourth, out fourthNum);
+            int.TryParse(ffth, out ffthNum);
+
+            Console.WriteLine(string.Concat(firstNum, " ", secondNum, " ", thirdNum, " ", fourthNum, " ", ffthNum));
+            Console.WriteLine(firstNum + secondNum + thirdNum + fourthNum + ffthNum);
         }
     }
 }
