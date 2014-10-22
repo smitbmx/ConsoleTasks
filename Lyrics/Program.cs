@@ -13,7 +13,8 @@ namespace Lyrics
         static void Main(string[] args)
         {
             RunMethod runMethod = Stub;
-            runMethod += StudentV;
+            runMethod -= StudentV;
+            runMethod += Ogorod;
 
             runMethod.Invoke();
 
@@ -31,11 +32,22 @@ namespace Lyrics
             int hours = int.Parse(wakeUpTime[0]);
             int minutes = int.Parse(wakeUpTime[1]);
 
-            int slept = hours*60 + minutes;
-            int left = 24*60 - slept;
+            int slept = hours * 60 + minutes;
+            int left = 24 * 60 - slept;
 
             Console.WriteLine(slept);
             Console.WriteLine(left);
+        }
+
+        private static void Ogorod()
+        {
+            string[] data = Console.ReadLine().Split(' ');
+            int square = int.Parse(data[0])*100;
+            int wide = int.Parse(data[1]);
+
+            int res = (square/wide + wide) * 2;
+
+            Console.WriteLine(res);
         }
     }
 }
