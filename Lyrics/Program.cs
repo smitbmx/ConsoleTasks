@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Lyrics
@@ -14,7 +15,8 @@ namespace Lyrics
         {
             RunMethod runMethod = Stub;
             runMethod -= StudentV;
-            runMethod += Ogorod;
+            runMethod -= Ogorod;
+            runMethod += Cats;
 
             runMethod.Invoke();
 
@@ -42,12 +44,43 @@ namespace Lyrics
         private static void Ogorod()
         {
             string[] data = Console.ReadLine().Split(' ');
-            int square = int.Parse(data[0])*100;
+            int square = int.Parse(data[0]) * 100;
             int wide = int.Parse(data[1]);
 
-            int res = (square/wide + wide) * 2;
+            int res = (square / wide + wide) * 2;
 
             Console.WriteLine(res);
+        }
+
+
+
+        /// <summary>
+        /// В некотором царстве, в некотором государстве есть Г городов, в каждом городе по Д домов, в каждом доме по Э этажей и по П подъездов, в каждом подъезде на каждом этаже по К квартир, в каждой квартире по О окон. А на каждой крыше живёт по М мурзиков (котов). Сколько всего домов, квартир, окон и мурзиков в этом некотором государстве?
+        //Начальные данные: на семи строчках семь натуральных чисел - 
+        //Г, Д, Э, П, К, О и М, каждое не больше 10.
+        //Вывод результата: четыре строчки по одному числу: 
+        //количество домов, квартир, окон и мурзиков.
+        //Внимание! В этой программе НУЖНО использовать русские имена переменных!
+        /// </summary>
+        private static void Cats()
+        {
+            int Г = int.Parse(Console.ReadLine());
+            int Д = int.Parse(Console.ReadLine());
+            int Э = int.Parse(Console.ReadLine());
+            int П = int.Parse(Console.ReadLine());
+            int К = int.Parse(Console.ReadLine());
+            int О = int.Parse(Console.ReadLine());
+            int М = int.Parse(Console.ReadLine());
+
+            int домов = Г * Д;
+            int квартир = домов * Э * П * К;
+            int окон = квартир * О;
+            int мурзиков = домов * М;
+
+            Console.WriteLine(домов);
+            Console.WriteLine(квартир);
+            Console.WriteLine(окон);
+            Console.WriteLine(мурзиков);
         }
     }
 }
