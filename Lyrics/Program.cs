@@ -16,7 +16,8 @@ namespace Lyrics
             RunMethod runMethod = Stub;
             runMethod -= StudentV;
             runMethod -= Ogorod;
-            runMethod += Cats;
+            runMethod -= Cats;
+            runMethod += Typos;
 
             runMethod.Invoke();
 
@@ -81,6 +82,22 @@ namespace Lyrics
             Console.WriteLine(квартир);
             Console.WriteLine(окон);
             Console.WriteLine(мурзиков);
+        }
+
+        /// <summary>
+        /// Тётя Валя любит писать письма. Племянник Женя купил ей клавиатуру, и она теперь пишет письма на клавиатуре. Однако тётя Валя часто делает опечатки, которые тут же исправляет и пишет правильно. Сколько клавиш нажала на клавиатуре тётя Валя, если она сделала R опечаток при наборе письма в N килобайт?
+        //Начальные данные: два целых числа через пробел: N от 1 до 20, R от 0 до 1000.
+        //Вывод результата: одно число.
+        /// </summary>
+        private static void Typos()
+        {
+            string[] data = Console.ReadLine().Split(' ');
+            long N = long.Parse(data[0]);
+            long R = long.Parse(data[1]);
+
+            long keys = 1024*N + R*2;
+
+            Console.WriteLine(keys);
         }
     }
 }
