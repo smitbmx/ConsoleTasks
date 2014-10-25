@@ -17,7 +17,12 @@ namespace Lyrics
             runMethod -= StudentV;
             runMethod -= Ogorod;
             runMethod -= Cats;
-            runMethod += Typos;
+            runMethod -= Typos;
+            runMethod -= Classics1;
+            runMethod -= Classics2;
+            runMethod += Classics4;
+
+            //Classics3(0, 0, null, false);
 
             runMethod.Invoke();
 
@@ -95,9 +100,90 @@ namespace Lyrics
             long N = long.Parse(data[0]);
             long R = long.Parse(data[1]);
 
-            long keys = 1024*N + R*2;
+            long keys = 1024 * N + R * 2;
 
             Console.WriteLine(keys);
         }
+
+
+        private static void Classics1()
+        {
+            string input = Console.ReadLine();
+            int result = 0;
+
+            char[] charArr = input.ToCharArray();
+
+            foreach (char c in charArr)
+            {
+                result += int.Parse(c.ToString());
+            }
+
+            Console.WriteLine(result);
+        }
+
+        /// <summary>
+        /// Маленькая девочка любит играть в классики. Она рисует на асфальте мелом число и прыгает по цифрам этого числа. По каждой цифре столько раз, сколько написано. Сколько раз прыгнула маленькая девочка на одном числе?
+        //Начальные данные: целое число от 0 до 123456789.
+        //Вывод результата: одно число.
+        //Запрещенно:	if for
+        /// </summary>
+        private static void Classics2()
+        {
+            int input = int.Parse(Console.ReadLine());
+            int result = 0;
+
+            result += input % 10; input /= 10;
+            result += input % 10; input /= 10;
+            result += input % 10; input /= 10;
+            result += input % 10; input /= 10;
+            result += input % 10; input /= 10;
+            result += input % 10; input /= 10;
+            result += input % 10; input /= 10;
+            result += input % 10; input /= 10;
+            result += input % 10; input /= 10;
+            result += input % 10;
+
+            Console.WriteLine(result);
+        }
+
+        private static void Classics3(int position, int result, char[] charArr, bool flagInit)
+        {
+            if (!flagInit)
+            {
+                string input = Console.ReadLine();
+                position = 0;
+                charArr = input.ToCharArray();
+                result = 0;
+            }
+
+            if (charArr.Length - 1 >= position)
+            {
+                flagInit = true;
+                result += int.Parse(charArr[position].ToString());
+                position++;
+                Classics3(position, result, charArr, flagInit);
+            }
+            else
+            {
+                Console.WriteLine(result);
+            }
+        }
+
+        private static void Classics4()
+        {
+            string input = Console.ReadLine();
+            char[] charArr = input.ToCharArray();
+            int result = 0;
+
+            int i = 0;
+            while (i <= charArr.Length - 1)
+            {
+                result += int.Parse(charArr[i].ToString());
+                i++;
+            }
+
+            Console.WriteLine(result);
+        }
+
     }
 }
