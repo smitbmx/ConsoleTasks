@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Strings", "Strings\Strings.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lyrics", "Lyrics\Lyrics.csproj", "{2CEB6F26-84B1-4218-8EC7-5F88502CE0C0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Olymp", "Olymp\Olymp.csproj", "{56C334F7-7B4B-4F8C-B19E-4E4DFF6CB6E5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +33,10 @@ Global
 		{2CEB6F26-84B1-4218-8EC7-5F88502CE0C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2CEB6F26-84B1-4218-8EC7-5F88502CE0C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2CEB6F26-84B1-4218-8EC7-5F88502CE0C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56C334F7-7B4B-4F8C-B19E-4E4DFF6CB6E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56C334F7-7B4B-4F8C-B19E-4E4DFF6CB6E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56C334F7-7B4B-4F8C-B19E-4E4DFF6CB6E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56C334F7-7B4B-4F8C-B19E-4E4DFF6CB6E5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

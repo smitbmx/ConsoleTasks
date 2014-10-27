@@ -20,7 +20,8 @@ namespace Lyrics
             runMethod -= Typos;
             runMethod -= Classics1;
             runMethod -= Classics2;
-            runMethod += Classics4;
+            runMethod -= Classics4;
+            runMethod += OneAnaHalf;
 
             //Classics3(0, 0, null, false);
 
@@ -185,5 +186,19 @@ namespace Lyrics
             Console.WriteLine(result);
         }
 
+        /// <summary>
+        /// Если полторы курицы несут полтора яйца в полтора дня, 
+        //то сколько яиц снесут N кур за N дней?
+        //Начальные данные: целое число от 0 до 100.
+        //Вывод результата: одно целое число.
+        /// </summary>
+        private static void OneAnaHalf()
+        {
+            string input = Console.ReadLine();
+
+            int N = int.Parse(input);
+
+            Console.WriteLine(N * N * 2 / 3);
+        }
     }
 }
