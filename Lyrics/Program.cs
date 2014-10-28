@@ -21,7 +21,9 @@ namespace Lyrics
             runMethod -= Classics1;
             runMethod -= Classics2;
             runMethod -= Classics4;
-            runMethod += OneAnaHalf;
+            runMethod -= OneAnaHalf;
+            runMethod -= AppleTree;
+            runMethod += MikleMan;
 
             //Classics3(0, 0, null, false);
 
@@ -199,6 +201,41 @@ namespace Lyrics
             int N = int.Parse(input);
 
             Console.WriteLine(N * N * 2 / 3);
+        }
+
+        /// <summary>
+        /// На берёзе N1 толстых веток, на каждой толстой ветке по N2 тоненьких веточки. На каждой тоненькой веточке по N3 яблочек. Сколько всего яблок?
+        //Начальные данные: три целых числа через пробел: N1 N2 N3, каждое число от 0 до 10.
+        //Вывод результата: одно число.
+        //Примечание: задача с подвохом.
+        /// </summary>
+        private static void AppleTree()
+        {
+            //string[] input = Console.ReadLine().Split(' ');
+
+            //int bigBranch = int.Parse(input[0]);
+            //int smallBranch = int.Parse(input[1]);
+            //int apples = int.Parse(input[2]);
+
+            //int result = bigBranch * smallBranch * apples;
+            Console.WriteLine(0);
+        }
+
+        private static void MikleMan()
+        {
+            int oneAppleCost = 40;
+            int oneGreenBoutleCost = 25;
+            int countBrownBottle = 12;
+            int foundMoney = 5 * 2 + 10 * 5;
+
+            string[] input = Console.ReadLine().Split(' ');
+
+            int countGreenBottle = int.Parse(input[0]);
+            int oneBrownBottleCost = int.Parse(input[1]);
+
+            int totalMoney = oneGreenBoutleCost * countGreenBottle + countBrownBottle * oneBrownBottleCost + foundMoney;
+            int possibleBuyApples = totalMoney / oneAppleCost;
+            Console.WriteLine(possibleBuyApples);
         }
     }
 }
