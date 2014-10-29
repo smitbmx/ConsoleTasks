@@ -23,7 +23,8 @@ namespace Lyrics
             runMethod -= Classics4;
             runMethod -= OneAnaHalf;
             runMethod -= AppleTree;
-            runMethod += MikleMan;
+            runMethod -= MikleMan;
+            runMethod += Arithmetician;
 
             //Classics3(0, 0, null, false);
 
@@ -236,6 +237,11 @@ namespace Lyrics
             int totalMoney = oneGreenBoutleCost * countGreenBottle + countBrownBottle * oneBrownBottleCost + foundMoney;
             int possibleBuyApples = totalMoney / oneAppleCost;
             Console.WriteLine(possibleBuyApples);
+        }
+
+        private static void Arithmetician()
+        {
+            string[] input = Console.ReadLine().Split(' ');
         }
     }
 }
