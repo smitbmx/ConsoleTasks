@@ -242,6 +242,14 @@ namespace Lyrics
         private static void Arithmetician()
         {
             string[] input = Console.ReadLine().Split(' ');
+            int first = int.Parse(input[0]);
+            int second = int.Parse(input[1]);
+
+
+            Console.WriteLine(string.Format("{0} + {1} = {2}", first, second, first + second));
+            Console.WriteLine(string.Format("{0} - {1} = {2}", first, second, first - second));
+            Console.WriteLine(string.Format("{0} x {1} = {2}", first, second, first * second));
+            Console.WriteLine(string.Format("{0} : {1} = {2} ({3})", first, second, first / second, first % second));
         }
     }
 }
