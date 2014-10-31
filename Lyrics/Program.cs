@@ -24,7 +24,8 @@ namespace Lyrics
             runMethod -= OneAnaHalf;
             runMethod -= AppleTree;
             runMethod -= MikleMan;
-            runMethod += Arithmetician;
+            runMethod -= Arithmetician;
+            runMethod += Tram;
 
             //Classics3(0, 0, null, false);
 
@@ -250,6 +251,17 @@ namespace Lyrics
             Console.WriteLine(string.Format("{0} - {1} = {2}", first, second, first - second));
             Console.WriteLine(string.Format("{0} x {1} = {2}", first, second, first * second));
             Console.WriteLine(string.Format("{0} : {1} = {2} ({3})", first, second, first / second, first % second));
+        }
+
+        private static void Tram()
+        {
+            int stations = 5;
+            int people = 10 - 2 + 4 - 8 + 3 + 18;
+            int minutes = 10 + 15 + 7 + 30;
+
+            Console.WriteLine(stations);
+            Console.WriteLine(people);
+            Console.WriteLine(string.Concat(minutes / 60, " ", minutes % 60));
         }
     }
 }
