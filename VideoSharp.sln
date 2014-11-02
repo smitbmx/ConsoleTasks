@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Recursions", "Recursions\Re
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Symbols", "Symbols\Symbols.csproj", "{2B1BBC4E-02B4-4919-A82F-E9B7C167D95C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Math", "Math\Math.csproj", "{6DEF1137-0C4D-4269-BEA6-8872598DAEA5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,6 +57,10 @@ Global
 		{2B1BBC4E-02B4-4919-A82F-E9B7C167D95C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2B1BBC4E-02B4-4919-A82F-E9B7C167D95C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2B1BBC4E-02B4-4919-A82F-E9B7C167D95C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6DEF1137-0C4D-4269-BEA6-8872598DAEA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DEF1137-0C4D-4269-BEA6-8872598DAEA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DEF1137-0C4D-4269-BEA6-8872598DAEA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DEF1137-0C4D-4269-BEA6-8872598DAEA5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
