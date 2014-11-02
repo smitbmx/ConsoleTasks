@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinearRecord", "LinearRecor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Recursions", "Recursions\Recursions.csproj", "{7C172BFA-51A6-4DCB-9D8B-D87E61DDD278}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Symbols", "Symbols\Symbols.csproj", "{2B1BBC4E-02B4-4919-A82F-E9B7C167D95C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,6 +51,10 @@ Global
 		{7C172BFA-51A6-4DCB-9D8B-D87E61DDD278}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7C172BFA-51A6-4DCB-9D8B-D87E61DDD278}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7C172BFA-51A6-4DCB-9D8B-D87E61DDD278}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B1BBC4E-02B4-4919-A82F-E9B7C167D95C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B1BBC4E-02B4-4919-A82F-E9B7C167D95C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B1BBC4E-02B4-4919-A82F-E9B7C167D95C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B1BBC4E-02B4-4919-A82F-E9B7C167D95C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
