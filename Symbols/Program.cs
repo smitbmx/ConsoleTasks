@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -12,7 +13,11 @@ namespace Symbols
         static void Main(string[] args)
         {
             RunMethod runMethod = Stub;
-            runMethod += VideoSharp;
+            runMethod -= VideoSharp;
+            runMethod -= Visaginas;
+            runMethod -= LiteralCodes;
+            runMethod -= CodeLiterals;
+            runMethod += NextSymbols;
 
             runMethod.Invoke();
 
@@ -50,6 +55,91 @@ namespace Symbols
             }
 
             Console.WriteLine(res);
+        }
+
+        private static void Visaginas()
+        {
+            char[] input = "Visaginas".ToCharArray();
+
+            string res = string.Empty;
+            foreach (char c in input)
+            {
+                res += (int)c + " ";
+            }
+
+            Console.WriteLine(res.Trim());
+        }
+
+        /// <summary>
+        /// Вводится 5 символов - слово.
+        //Вывести в строчку коды букв этого слова.
+        //Начальные данные: слово из 5 символов.
+        //Вывод результата: пять чисел через пробел
+        /// </summary>
+        private static void LiteralCodes()
+        {
+            char[] input = Console.ReadLine().ToCharArray();
+
+            string res = string.Empty;
+            int i = 0;
+            foreach (char c in input)
+            {
+                if (i >= 5)
+                {
+                    break;
+                }
+                res += (int)c + " ";
+                i++;
+            }
+
+            Console.WriteLine(res.Trim());
+        }
+
+        /// <summary>
+        /// Вводится 7 символьных кодов через пробел.
+        //Вывести на экран текст, состоящее из символов этих кодов.
+        //Начальные данные: 7 символьных кодов через пробел.
+        //Вывод результата: текст в одно слово.
+        /// </summary>
+        private static void CodeLiterals()
+        {
+            string[] input = Console.ReadLine().Split(' ');
+
+            string res = string.Empty;
+
+            int i = 0;
+            foreach (string s in input)
+            {
+                if (i >= 7)
+                {
+                    break;
+                }
+                res += Convert.ToChar(int.Parse(s));
+                i++;
+            }
+
+            Console.WriteLine(res);
+        }
+
+        /// <summary>
+        /// Вводится символ.
+        //Вывести в строчку этот и следующие
+        //за ним пять символов по таблице ASCII.
+        //Начальные данные: один символ.
+        //Вывод результата: шесть символов в строчку через пробел.
+        /// </summary>
+        private static void NextSymbols()
+        {
+            char input = Convert.ToChar(Console.ReadLine());
+
+            string res = string.Empty;
+            for (int i = 0; i <= 5; i++)
+            {
+                res += input + " ";
+                input++;
+            }
+
+            Console.WriteLine(res.Trim());
         }
     }
 }
