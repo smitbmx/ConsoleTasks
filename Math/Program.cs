@@ -14,7 +14,8 @@ namespace Math
             RunMethod runMethod = Stub;
             runMethod -= Cube;
             runMethod -= Circle;
-            runMethod += StopWatch;
+            runMethod -= StopWatch;
+            runMethod += Geometric;
 
             runMethod.Invoke();
 
@@ -70,6 +71,26 @@ namespace Math
             long hours = totalSeconds / 3600 % 24;
 
             Console.WriteLine(string.Concat(hours, " ", minutes, " ", seconds));
+        }
+
+        /// <summary>
+        /// Даны два вещественных числа.
+        //Вычислить среднее геометрическое их модулей с точностью до сотых. 
+        //Среднее геометрическое двух чисел - это корень их произведения.
+        //Модуль числа       |x|       Math.Abs (x)
+        //Корень числа       √x        Math.Sqrt (x)
+        //Начальные данные: два вещественных числа.
+        //Вывод результата: одно вещественное число.
+        /// </summary>
+        private static void Geometric()
+        {
+            string[] input = Console.ReadLine().Split(' ');
+            double x = System.Math.Abs(double.Parse(input[0]));
+            double y = System.Math.Abs(double.Parse(input[1]));
+
+            double res = System.Math.Sqrt(x * y);
+
+            Console.WriteLine("{0:f2}", res);
         }
     }
 }
