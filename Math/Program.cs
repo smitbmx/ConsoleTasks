@@ -17,7 +17,9 @@ namespace Math
             runMethod -= Circle;
             runMethod -= StopWatch;
             runMethod -= Geometric;
-            runMethod += Rectangle;
+            runMethod -= Rectangle;
+            runMethod += LengthInterval;
+
 
             runMethod.Invoke();
 
@@ -115,6 +117,30 @@ namespace Math
             int res = height * wide;
 
             Console.WriteLine(res);
+        }
+
+        /// <summary>
+        /// Даны координаты вершин отрезка.
+        //Найти длину данного отрезка с точностью до сотых.
+        //Начальные данные: по два числа на двух строчках - координаты точек.
+        //Вывод результата: одно вещественное число - длина отрезка.
+        /// </summary>
+        private static void LengthInterval()
+        {
+            string[] FirstCoordinates = Console.ReadLine().Split(' ');
+            string[] SecondCoordinates = Console.ReadLine().Split(' ');
+
+            double first = double.Parse(FirstCoordinates[0]);
+            double second = double.Parse(FirstCoordinates[1]);
+            double third = double.Parse(SecondCoordinates[0]);
+            double fourth = double.Parse(SecondCoordinates[1]);
+
+            double height = fourth - second;
+            double wide = third - first;
+
+            double res = System.Math.Sqrt(height * height + wide * wide);
+
+            Console.WriteLine("{0:f2}", res);
         }
     }
 }
