@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lyrics", "Lyrics\Lyrics.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Olymp", "Olymp\Olymp.csproj", "{56C334F7-7B4B-4F8C-B19E-4E4DFF6CB6E5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinearRecord", "LinearRecord\LinearRecord.csproj", "{F7416F77-7983-45BB-9FCB-C7C5F5EBCBDC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Recursions", "Recursions\Recursions.csproj", "{7C172BFA-51A6-4DCB-9D8B-D87E61DDD278}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,6 +41,14 @@ Global
 		{56C334F7-7B4B-4F8C-B19E-4E4DFF6CB6E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{56C334F7-7B4B-4F8C-B19E-4E4DFF6CB6E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{56C334F7-7B4B-4F8C-B19E-4E4DFF6CB6E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7416F77-7983-45BB-9FCB-C7C5F5EBCBDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7416F77-7983-45BB-9FCB-C7C5F5EBCBDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7416F77-7983-45BB-9FCB-C7C5F5EBCBDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7416F77-7983-45BB-9FCB-C7C5F5EBCBDC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C172BFA-51A6-4DCB-9D8B-D87E61DDD278}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C172BFA-51A6-4DCB-9D8B-D87E61DDD278}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C172BFA-51A6-4DCB-9D8B-D87E61DDD278}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C172BFA-51A6-4DCB-9D8B-D87E61DDD278}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
