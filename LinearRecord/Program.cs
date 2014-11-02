@@ -18,7 +18,10 @@ namespace LinearRecord
             runMethod -= Formula0010;
             runMethod -= Formula0011;
             runMethod -= Formula0100;
-            runMethod += Formula0101;
+            runMethod -= Formula0101;
+            runMethod -= Formula0110;
+            runMethod -= Formula0111;
+            runMethod += Formula1000;
 
             runMethod.Invoke();
 
@@ -111,6 +114,38 @@ namespace LinearRecord
 
             double z = (Math.Pow(a * x, 2) * Math.Pow(1 / Math.Pow(a + x, 2), 1.0 / 3.0)) / (a * Math.Log(a + x * x));
             Console.WriteLine("{0:0.000000}", z);
+        }
+
+
+        private static void Formula0110()
+        {
+            double a = double.Parse(Console.ReadLine());
+            double b = double.Parse(Console.ReadLine());
+            double x = double.Parse(Console.ReadLine());
+
+            double t = Math.Pow(a + b, 2) * Math.Log(a + x) * Math.Sqrt((a + x) / (b + x));
+
+            Console.WriteLine("{0:0.0000}", t);
+        }
+
+        private static void Formula0111()
+        {
+            double a = double.Parse(Console.ReadLine());
+            double x = double.Parse(Console.ReadLine());
+
+            double y = (a * a + x * Math.Pow(x, 1.0 / 3.0)) / (Math.Sqrt(a) + Math.Pow(x, 1.0 / 3.0));
+
+            Console.WriteLine("{0:0.000000}", y);
+        }
+
+        private static void Formula1000()
+        {
+            double a = double.Parse(Console.ReadLine());
+            double x = double.Parse(Console.ReadLine());
+
+            double t = (a + Math.Sqrt(a * x)) / (Math.Sqrt(a) + Math.Log(a + x));
+
+            Console.WriteLine("{0:0.000000}", t);
         }
     }
 }
