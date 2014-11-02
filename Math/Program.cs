@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -15,7 +16,8 @@ namespace Math
             runMethod -= Cube;
             runMethod -= Circle;
             runMethod -= StopWatch;
-            runMethod += Geometric;
+            runMethod -= Geometric;
+            runMethod += Rectangle;
 
             runMethod.Invoke();
 
@@ -91,6 +93,28 @@ namespace Math
             double res = System.Math.Sqrt(x * y);
 
             Console.WriteLine("{0:f2}", res);
+        }
+
+        /// <summary>
+        /// Даны координаты левой нижней и правой верхней вершин прямоугольника.
+        //Найти его площадь.
+        //Начальные данные: четыре целых числа на строке через пробел.
+        //Вывод результата: одно целое число.
+        /// </summary>
+        private static void Rectangle()
+        {
+            string[] input = Console.ReadLine().Split(' ');
+            int first = int.Parse(input[0]);
+            int second = int.Parse(input[1]);
+            int third = int.Parse(input[2]);
+            int fourth = int.Parse(input[3]);
+
+            int height = fourth - second;
+            int wide = third - first;
+
+            int res = height * wide;
+
+            Console.WriteLine(res);
         }
     }
 }
