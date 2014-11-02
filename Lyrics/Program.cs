@@ -25,7 +25,8 @@ namespace Lyrics
             runMethod -= AppleTree;
             runMethod -= MikleMan;
             runMethod -= Arithmetician;
-            runMethod += Tram;
+            runMethod -= Tram;
+            runMethod += Bankirs;
 
             //Classics3(0, 0, null, false);
 
@@ -262,6 +263,15 @@ namespace Lyrics
             Console.WriteLine(stations);
             Console.WriteLine(people);
             Console.WriteLine(string.Concat(minutes / 60, " ", minutes % 60));
+        }
+
+        private static void Bankirs()
+        {
+            string[] input = Console.ReadLine().Split(' ');
+            int first = int.Parse(input[0]);
+            int second = int.Parse(input[1]);
+
+            Console.WriteLine(string.Concat(first + second, " ", first * second));
         }
     }
 }
