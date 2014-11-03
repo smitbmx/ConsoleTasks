@@ -26,7 +26,8 @@ namespace Lyrics
             runMethod -= MikleMan;
             runMethod -= Arithmetician;
             runMethod -= Tram;
-            runMethod += Bankirs;
+            runMethod -= Bankirs;
+            runMethod += Tickets;
 
             //Classics3(0, 0, null, false);
 
@@ -272,6 +273,28 @@ namespace Lyrics
             int second = int.Parse(input[1]);
 
             Console.WriteLine(string.Concat(first + second, " ", first * second));
+        }
+
+        private static void Tickets()
+        {
+            char[] firstTicket = Console.ReadLine().ToCharArray();
+            char[] secondTicket = Console.ReadLine().ToCharArray();
+
+            int sum = 0;
+            for (int i = 0; i < firstTicket.Length; i++)
+            {
+                if (firstTicket[i] > secondTicket[i])
+                {
+                    sum += firstTicket[i] - secondTicket[i];
+                }
+                else
+                {
+                    sum += secondTicket[i] - firstTicket[i];
+                }
+            }
+
+
+            Console.WriteLine(sum);
         }
     }
 }
