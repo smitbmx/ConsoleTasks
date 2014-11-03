@@ -104,6 +104,8 @@ namespace Olymp
         //Пример:
         //NO
         //24
+
+        //http://www.videosharp.info/console/task/level=248
         /// </summary>
         private static void CatsAndElevators()
         {

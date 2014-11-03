@@ -18,7 +18,10 @@ namespace Math
             runMethod -= StopWatch;
             runMethod -= Geometric;
             runMethod -= Rectangle;
-            runMethod += LengthInterval;
+            runMethod -= LengthInterval;
+            runMethod -= Discriminant;
+            runMethod -= CircleSquare;
+            runMethod += CircleSquare2;
 
 
             runMethod.Invoke();
@@ -141,6 +144,59 @@ namespace Math
             double res = System.Math.Sqrt(height * height + wide * wide);
 
             Console.WriteLine("{0:f2}", res);
+        }
+
+        private static void Discriminant()
+        {
+            string[] input = Console.ReadLine().Split(' ');
+            int a = int.Parse(input[0]);
+            int b = int.Parse(input[1]);
+            int c = int.Parse(input[2]);
+
+            int d = b * b - 4 * a * c;
+
+            Console.WriteLine(d);
+        }
+        /// <summary>
+        /// Вводятся четыре числа - 
+        //координаты центра окружности и 
+        //координаты одной из точек на окружности.
+        //Найти площадь этого круга c точностью до сотых.
+        //Начальные данные: четыре вещественных числа.
+        //Вывод результата: вещественное число - площадь круга.
+        /// </summary>
+        private static void CircleSquare()
+        {
+            string[] input = Console.ReadLine().Split(' ');
+            double circleSquare = 0;
+
+            double first = double.Parse(input[0]);
+            double second = double.Parse(input[1]);
+            double third = double.Parse(input[2]);
+            double fourth = double.Parse(input[3]);
+
+            double height = fourth - second;
+            double width = third - first;
+
+            double radius = System.Math.Sqrt(height * height + width * width);
+            circleSquare = System.Math.PI * radius * radius;
+
+            string resultWithComa = string.Format("{0:0.00}", circleSquare);
+            Console.WriteLine(resultWithComa.Replace(",", "."));
+        }
+
+        private static void CircleSquare2()
+        {
+            string[] input = Console.ReadLine().Split();
+            double x, y, ax, ay, S;
+            x = double.Parse(input[0]);
+            y = double.Parse(input[1]);
+            ax = double.Parse(input[2]);
+            ay = double.Parse(input[3]);
+
+            S = System.Math.PI * ((ax - x) * (ax - x) + (ay - y) * (ay - y));
+            string resultWithComa = string.Format("{0:0.00}", S);
+            Console.WriteLine("{0:f2}", resultWithComa.Replace(",", "."));
         }
     }
 }
