@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 
 namespace Lyrics
 {
@@ -27,9 +26,13 @@ namespace Lyrics
             runMethod -= Arithmetician;
             runMethod -= Tram;
             runMethod -= Bankirs;
-            runMethod += Tickets;
+            runMethod -= Tickets;
+            runMethod -= FavoriteNumbers;
+            runMethod += FavoriteNumbers3;
 
             //Classics3(0, 0, null, false);
+
+            //FavoriteNumbers2();
 
             runMethod.Invoke();
 
@@ -295,6 +298,73 @@ namespace Lyrics
 
 
             Console.WriteLine(sum);
+        }
+
+        private static void FavoriteNumbers()
+        {
+            string input = Console.ReadLine();
+            long result = 0;
+
+            while (result >= 10 || result == 0)
+            {
+                result = 0;
+                for (var i = 0; i < input.Length; i++)
+                {
+                    result += long.Parse(input[i].ToString());
+                }
+
+                input = result.ToString();
+            }
+
+
+            Console.WriteLine(result);
+        }
+
+        private static void FavoriteNumbers2(long result = 0, bool flagInit = false, string input = "")
+        {
+            if (!flagInit)
+            {
+                string inp = Console.ReadLine();
+                input = inp;
+            }
+
+
+            if (result > 10 || result == 0)
+            {
+                result = 0;
+                for (int i = 0; i < input.Length; i++)
+                {
+                    result += long.Parse(input[i].ToString());
+                }
+
+                input = result.ToString();
+
+                FavoriteNumbers2(result, true, input);
+            }
+            else
+            {
+                Console.WriteLine(result);
+            }
+        }
+
+
+        private static void FavoriteNumbers3()
+        {
+            char[] input = Console.ReadLine().ToCharArray();
+            long result = 0;
+
+            do
+            {
+                result = 0;
+                for (int i = 0; i < input.Length; i++)
+                {
+                    result += long.Parse(input[i].ToString());
+                }
+
+                input = result.ToString().ToCharArray();
+            } while (result >= 10);
+
+            Console.WriteLine(result);
         }
     }
 }
