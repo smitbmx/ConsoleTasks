@@ -8,11 +8,13 @@ namespace Recursions
 {
     class Program
     {
-        
+
         static void Main(string[] args)
         {
 
-            Back();
+            Console.WriteLine(Factorial(5));
+
+            //Back();
             Console.ReadLine();
         }
 
@@ -22,7 +24,12 @@ namespace Recursions
 
         private static int Factorial(int n)
         {
-            return 0;
+            if (n <= 1)
+            {
+                return 1;
+            }
+
+            return Factorial(n - 1) * n;
         }
 
         private static void Back()
