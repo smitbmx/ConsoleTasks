@@ -12,7 +12,8 @@ namespace Recursions
         static void Main(string[] args)
         {
 
-            Console.WriteLine(Factorial(5));
+            //Console.WriteLine(Factorial(5));
+            Console.WriteLine(Fibonacci(7));
 
             //Back();
             Console.ReadLine();
@@ -41,6 +42,16 @@ namespace Recursions
             }
             Back();
             Console.WriteLine(n);
+        }
+
+        private static int Fibonacci(int n)
+        {
+            if (n==1 || n==2)
+            {
+                return 1;
+            }
+
+            return Fibonacci(n - 1) + Fibonacci(n - 2);
         }
     }
 }
