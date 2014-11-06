@@ -21,7 +21,8 @@ namespace Math
             runMethod -= LengthInterval;
             runMethod -= Discriminant;
             runMethod -= CircleSquare;
-            runMethod += CircleSquare2;
+            runMethod -= CircleSquare2;
+            runMethod += SinRad;
 
 
             runMethod.Invoke();
@@ -197,6 +198,16 @@ namespace Math
             S = System.Math.PI * ((ax - x) * (ax - x) + (ay - y) * (ay - y));
             string resultWithComa = string.Format("{0:0.00}", S);
             Console.WriteLine("{0:f2}", resultWithComa.Replace(",", "."));
+        }
+
+        private static void SinRad()
+        {
+            double angle = double.Parse(Console.ReadLine());
+            double res = 0;
+
+            res = System.Math.Sin(angle * System.Math.PI / 180);
+
+            Console.WriteLine("{0:f2}", res);
         }
     }
 }
