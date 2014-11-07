@@ -22,7 +22,8 @@ namespace Math
             runMethod -= Discriminant;
             runMethod -= CircleSquare;
             runMethod -= CircleSquare2;
-            runMethod += SinRad;
+            runMethod -= SinRad;
+            runMethod += ZeroZero;
 
 
             runMethod.Invoke();
@@ -208,6 +209,27 @@ namespace Math
             res = System.Math.Sin(angle * System.Math.PI / 180);
 
             Console.WriteLine("{0:f2}", res);
+        }
+
+        /// <summary>
+        /// Дано натуральное число.
+        //Обнулить в нем единицы и десятки.
+        //Начальные данные: одно натуральное число.
+        //Вывод результата: одно натуральное число
+        //123 => 100
+        /// </summary>
+        private static void ZeroZero()
+        {
+            int input = int.Parse(Console.ReadLine());
+            string str = input.ToString();
+            int result = 0;
+
+            int last = int.Parse(str[str.Length - 1].ToString());
+            int lastLast = int.Parse(str[str.Length - 2].ToString());
+
+            result = input - (lastLast * 10 + last);
+
+            Console.WriteLine(result);
         }
     }
 }
