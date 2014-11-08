@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,7 +24,8 @@ namespace Math
             runMethod -= CircleSquare;
             runMethod -= CircleSquare2;
             runMethod -= SinRad;
-            runMethod += ZeroZero;
+            runMethod -= ZeroZero;
+            runMethod += Vector;
 
 
             runMethod.Invoke();
@@ -230,6 +232,20 @@ namespace Math
             result = input - (lastLast * 10 + last);
 
             Console.WriteLine(result);
+        }
+
+        /// <summary>
+        /// Дана длина вектора и одна из его координат.
+        //Найти его вторую координату (неотрицательное значение) с точностью до сотых.
+        //Начальные данные: два вещественных числа на двух строчках.
+        //Вывод результата: одно вещественное неотрицательное число.
+        /// </summary>
+        private static void Vector()
+        {
+            string input = Console.ReadLine();
+            double res = 0;
+
+            Console.WriteLine(res);
         }
     }
 }
