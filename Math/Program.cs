@@ -247,5 +247,10 @@ namespace Math
 
             Console.WriteLine(res);
         }
+
+        private static void Banki()
+        {
+            
+        }
     }
 }
