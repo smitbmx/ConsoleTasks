@@ -248,7 +248,7 @@ namespace Math
             Console.WriteLine(res);
         }
 
-        private static void Banki()
+        private static void Bank()
         {
             
         }
