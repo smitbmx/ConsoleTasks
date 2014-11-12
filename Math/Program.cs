@@ -242,15 +242,18 @@ namespace Math
         /// </summary>
         private static void Vector()
         {
-            string input = Console.ReadLine();
-            double res = 0;
+            double L = double.Parse(Console.ReadLine());
+            double x = double.Parse(Console.ReadLine());
+            double y = 0;
 
-            Console.WriteLine(res);
+            y = System.Math.Sqrt(L * L - x * x);
+
+            Console.WriteLine("{0:f2}", y);
         }
 
         private static void Bank()
         {
-            
+
         }
     }
 }
