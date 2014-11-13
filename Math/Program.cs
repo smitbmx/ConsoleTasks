@@ -25,7 +25,8 @@ namespace Math
             runMethod -= CircleSquare2;
             runMethod -= SinRad;
             runMethod -= ZeroZero;
-            runMethod += Vector;
+            runMethod -= Vector;
+            runMethod += Bank;
 
 
             runMethod.Invoke();
@@ -251,9 +252,41 @@ namespace Math
             Console.WriteLine("{0:f2}", y);
         }
 
+        /// <summary>
+        /// На счет в банке на 5 лет была положена определенная денежная сумма под определенный годовой процент. Проценты начисляются каждый год в зависимости от суммы на счете. Вводятся начальная сумма и годовой процент (от 1 до 100). Какая сумма будет на счете через 5 лет? 
+        //Начисляемые проценты округляются до копеек.
+
+        //Начальные данные: два вещественных числа - денежная сумма и годовой процент.
+        //Вывод результата: одно вещественное число - итоговая сумма по прошествию 5 лет.
+        /// </summary>
         private static void Bank()
         {
+            string[] input = Console.ReadLine().Split(' ');
+            double beginSum = double.Parse(input[0]);
+            double yearPercent = double.Parse(input[1]);
+            int depositYears = 5;
+            int yearsDone = 0;
+            double result = 0;
+            double tempSum = 0;
 
+            while (yearsDone < depositYears)
+            {
+                if (tempSum == 0)
+                {
+                    tempSum = beginSum;
+                    result = beginSum;
+                }
+                else
+                {
+                    tempSum = result;
+                }
+
+                double percentSavings = System.Math.Round(tempSum * yearPercent / 100, 2);
+                result += percentSavings;
+                yearsDone++;
+            }
+
+            Console.WriteLine("{0:f2}", result);
         }
     }
 }
