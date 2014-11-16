@@ -13,7 +13,8 @@ namespace FullTasks
         {
             RunMethod runMethod = Stub;
             runMethod -= Arithmetic;
-            runMethod += Equation;
+            runMethod -= Equation;
+            runMethod += NLessons;
 
             runMethod.Invoke();
 
@@ -62,6 +63,30 @@ namespace FullTasks
 
 
             Console.WriteLine("{0:f1}", x);
+        }
+
+        /// <summary>
+        //        /// В школе уроки начинаются в восемь часов утра.
+        //У Вовочки сегодня N уроков (N > 0).
+        //Каждый урок длится 45 минут, между уроками перемены по 10 минут.
+        //В какое время Вовочка будет свободен от уроков?
+
+        //Начальные данные: На первой строке записано количество уроков, целое число от 0 до 20.
+        //Вывод результата: Записать время окончания уроков в виде HH:MM.
+        /// </summary>
+        private static void NLessons()
+        {
+            int countLessons = int.Parse(Console.ReadLine());
+            int defaultTime = 8 * 60;
+            int lessons = 45 * countLessons;
+            int breaks = (countLessons - 1) * 10;
+            breaks = countLessons == 0 ? 0 : breaks;
+
+            int totalMinutes = defaultTime + lessons + breaks;
+
+            int hours = totalMinutes / 60 % 24;
+            int minutes = totalMinutes % 60;
+            Console.WriteLine("{0:00}:{1:00}", hours, minutes);
         }
     }
 }
