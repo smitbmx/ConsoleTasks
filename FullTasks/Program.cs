@@ -14,7 +14,8 @@ namespace FullTasks
             RunMethod runMethod = Stub;
             runMethod -= Arithmetic;
             runMethod -= Equation;
-            runMethod += NLessons;
+            runMethod -= NLessons;
+            runMethod += Perimeter;
 
             runMethod.Invoke();
 
@@ -87,6 +88,39 @@ namespace FullTasks
             int hours = totalMinutes / 60 % 24;
             int minutes = totalMinutes % 60;
             Console.WriteLine("{0:00}:{1:00}", hours, minutes);
+        }
+
+        /// <summary>
+        //Даны координаты вершин треугольника (на плоскости). 
+        //Найти его периметр, ответ округлить до сотых.
+        //Подсказки:
+        //Длина стороны AB вычисляется по формуле: корень ( (Ax-Bx)^2 + (Ay-By)^2 ).
+        //Периметр вычисляется как сумма всех сторон.
+
+        //Начальные данные: по два целых числа на трёх строчках
+        //Вывод результата: одно вещественное число - периметр треугольника.
+        /// </summary>
+        private static void Perimeter()
+        {
+            string[] ACoordinate = Console.ReadLine().Split(' ');
+            string[] BCoordinate = Console.ReadLine().Split(' ');
+            string[] CCoordinate = Console.ReadLine().Split(' ');
+            double AB = 0, BC = 0, AC = 0, perimeter = 0;
+
+            int Ax = int.Parse(ACoordinate[0]);
+            int Ay = int.Parse(ACoordinate[1]);
+            int Bx = int.Parse(BCoordinate[0]);
+            int By = int.Parse(BCoordinate[1]);
+            int Cx = int.Parse(CCoordinate[0]);
+            int Cy = int.Parse(CCoordinate[1]);
+
+            AB = Math.Sqrt(Math.Pow(Ax - Bx, 2) + Math.Pow(Ay - By, 2));
+            BC = Math.Sqrt(Math.Pow(Bx - Cx, 2) + Math.Pow(By - Cy, 2));
+            AC = Math.Sqrt(Math.Pow(Ax - Cx, 2) + Math.Pow(Ay - Cy, 2));
+
+            perimeter = Math.Round(AB + BC + AC, 2);
+
+            Console.WriteLine("{0:f2}", perimeter);
         }
     }
 }
