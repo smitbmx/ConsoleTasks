@@ -15,7 +15,8 @@ namespace FullTasks
             runMethod -= Arithmetic;
             runMethod -= Equation;
             runMethod -= NLessons;
-            runMethod += Perimeter;
+            runMethod -= Perimeter;
+            runMethod += Square;
 
             runMethod.Invoke();
 
@@ -121,6 +122,23 @@ namespace FullTasks
             perimeter = Math.Round(AB + BC + AC, 2);
 
             Console.WriteLine("{0:f2}", perimeter);
+        }
+
+        /// <summary>
+        /// Даны координаты точки на плоскости. Вычислить площадь прямоугольного треугольника с точностью до сотых, катеты которого параллельны координатным осям, а вершины — заданная точка и точки пересечения с осями координат прямых, проходящих через заданную точку и параллельных осям координат.
+        //Подсказка:
+        //Площадь прямоугольного прямоугольника равна полупроизведению длин его катетов.
+
+        //Начальные данные: два вещественных числа на одной строке через пробел — координаты точки на плоскости.
+        //Вывод результата: одно вещественное число — площадь прямоугольного треугольника.
+        /// </summary>
+        private static void Square()
+        {
+            string[] input = Console.ReadLine().Split(' ');
+
+            double square = Math.Abs(double.Parse(input[0]) * double.Parse(input[1]) / 2);
+
+            Console.WriteLine("{0:f2}", square);
         }
     }
 }
