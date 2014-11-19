@@ -16,7 +16,8 @@ namespace FullTasks
             runMethod -= Equation;
             runMethod -= NLessons;
             runMethod -= Perimeter;
-            runMethod += Square;
+            runMethod -= Square;
+            runMethod += SecondFractional;
 
             runMethod.Invoke();
 
@@ -139,6 +140,44 @@ namespace FullTasks
             double square = Math.Abs(double.Parse(input[0]) * double.Parse(input[1]) / 2);
 
             Console.WriteLine("{0:f2}", square);
+        }
+
+        /// <summary>
+        /// у (после запятой) в дробной части.
+        //Начальные данные: одно вещественное число.
+        //Вывод результата: одн
+        /// </summary>
+        private static void SecondFractional()
+        {
+            string input = Console.ReadLine();
+            string fraction = input.Split('.')[1].Substring(0, 3);
+
+            Console.WriteLine(int.Parse(fraction[1].ToString()));
+        }
+
+        private static void SecondFraction2()
+        {
+            double a = double.Parse(Console.ReadLine());
+            a = Math.Floor(Math.Abs(a) * 100);
+            int b = Convert.ToInt32(a);
+            b = b % 10;
+            Console.WriteLine(b);
+        }
+
+        /// <summary>
+        /// Вводится арифметическое выражение в виде: 
+        //A+B*C=
+        //Всегда именно в таком виде: 
+        //первое число, знак сложения, второе число, знак умножения, третье число, знак равно, всё без пробелов.
+
+        //Вывести его значение.
+
+        //Начальные данные: арифметическое выражение по шаблону.
+        //Вывод результата: одно целое число - значение арифметического выражения.
+        /// </summary>
+        private static void Arithmetic2()
+        {
+
         }
     }
 }
