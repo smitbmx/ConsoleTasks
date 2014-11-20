@@ -17,7 +17,8 @@ namespace FullTasks
             runMethod -= NLessons;
             runMethod -= Perimeter;
             runMethod -= Square;
-            runMethod += SecondFractional;
+            runMethod -= SecondFractional;
+            runMethod += Arithmetic2;
 
             runMethod.Invoke();
 
@@ -176,6 +177,37 @@ namespace FullTasks
         //Вывод результата: одно целое число - значение арифметического выражения.
         /// </summary>
         private static void Arithmetic2()
+        {
+            string input = Console.ReadLine();
+            int plusPos = input.IndexOf('+');
+            int multiplyPos = input.IndexOf('*');
+            int equalPos = input.IndexOf('=');
+            long first = long.Parse(input.Substring(0, plusPos));
+            long second = long.Parse(input.Substring(plusPos + 1, multiplyPos - plusPos - 1));
+            long third = long.Parse(input.Substring(multiplyPos + 1, equalPos - multiplyPos - 1));
+
+            long res = first + second * third;
+            Console.WriteLine(res);
+        }
+
+        /// <summary>
+        /// Дан один корень квадратного уравнения и коэффициент с.
+        //Известно, что коэффициент a равен 1. Найти второй 
+        //корень и коэффициент b с точностью до десятых.
+
+        //Подсказка: 
+        //Используйте теорему Виета.
+        //x1 + x2 = - b
+        //x1 * x2 = c
+
+        //Начальные данные: два целых числа на строке через пробел - 
+        //* первый корень квадратного уравнения
+        //* коэффициент с.
+        //Вывод результата: два вещественных числа с точностью до десятых - 
+        //* второй корень квадратного уравнения
+        //* коэффициент b.
+        /// </summary>
+        private static void Equation2()
         {
 
         }
