@@ -19,7 +19,8 @@ namespace FullTasks
             runMethod -= Square;
             runMethod -= SecondFractional;
             runMethod -= Arithmetic2;
-            runMethod += Equation2;
+            runMethod -= Equation2;
+            runMethod += ChickenAndEggs;
 
             runMethod.Invoke();
 
@@ -219,6 +220,23 @@ namespace FullTasks
             double b = (x1 + x2) * (-1);
 
             Console.WriteLine("{0:f1} {1:f1}", x2, b);
+        }
+
+        /// <summary>
+        /// 5 кур несут 5 яиц за 5 дней.
+        //Сколько яиц снесут A кур за A дней?
+        //Начальные данные: одно натуральное число.
+        //Вывод результата: одно натуральное число.
+        /// </summary>
+        private static void ChickenAndEggs()
+        {
+            long varialbe = long.Parse(Console.ReadLine());
+            long countChicken = varialbe;
+            long days = varialbe;
+
+            long countEggs = days * countChicken / 5;
+
+            Console.WriteLine(countEggs);
         }
     }
 }
