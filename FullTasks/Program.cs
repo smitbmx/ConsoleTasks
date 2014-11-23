@@ -18,7 +18,8 @@ namespace FullTasks
             runMethod -= Perimeter;
             runMethod -= Square;
             runMethod -= SecondFractional;
-            runMethod += Arithmetic2;
+            runMethod -= Arithmetic2;
+            runMethod += Equation2;
 
             runMethod.Invoke();
 
@@ -209,7 +210,15 @@ namespace FullTasks
         /// </summary>
         private static void Equation2()
         {
+            string[] input = Console.ReadLine().Split();
 
+            double x1 = double.Parse(input[0]);
+            double c = double.Parse(input[1]);
+
+            double x2 = c / x1;
+            double b = (x1 + x2) * (-1);
+
+            Console.WriteLine("{0:f1} {1:f1}", x2, b);
         }
     }
 }
