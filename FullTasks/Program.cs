@@ -20,7 +20,9 @@ namespace FullTasks
             runMethod -= SecondFractional;
             runMethod -= Arithmetic2;
             runMethod -= Equation2;
-            runMethod += ChickenAndEggs;
+            runMethod -= ChickenAndEggs;
+            //runMethod += Clocks;
+            runMethod += Clocks2Variand;
 
             runMethod.Invoke();
 
@@ -237,6 +239,61 @@ namespace FullTasks
             long countEggs = days * countChicken / 5;
 
             Console.WriteLine(countEggs);
+        }
+
+        /// <summary>
+        /// Дано время (часы, минуты).
+        //Определить угол между часовой и минутной стрелками часов.
+        //Считать, что стрелки сдвигаются один раз в минуту. 
+        //Ответ должен быть не более 180 градусов.
+        //Ответ записать в градусах целым числом.
+        //Начальные данные: Вводятся два целых числа через пробел: H, M. (0≤H<24, 0≤M<60, M mod 2 = 0)
+        //Вывод результата: Вывести число - количество градусов
+
+        //have bugs
+        /// </summary>
+        private static void Clocks()
+        {
+            string[] input = Console.ReadLine().Split();
+            int hours = int.Parse(input[0]);
+            int minutes = int.Parse(input[1]);
+            const int hourDegree = 30;
+            const int minuteDegree = 6;
+
+            int firstHoursDegree = 360 - hours * hourDegree;
+            int secondHoursDegree = 360 - firstHoursDegree;
+            int minHoursDegree = Math.Min(firstHoursDegree, secondHoursDegree);
+
+            int firstMinutesDegree = 360 - minutes * minuteDegree;
+            int secondMinuteDegree = 360 - firstMinutesDegree;
+            int minMinutesDegree = Math.Min(firstMinutesDegree, secondMinuteDegree);
+
+            int resultDegreeBetweenClocks = Math.Abs(minMinutesDegree - minHoursDegree);
+
+            int pseudoResult = 360 - resultDegreeBetweenClocks;
+            int realResult = Math.Min(resultDegreeBetweenClocks, pseudoResult);
+
+            Console.WriteLine(realResult);
+        }
+
+        //have bugs ?
+        private static void Clocks2Variand()
+        {
+            string[] input = Console.ReadLine().Split();
+            long hours = long.Parse(input[0]);
+            long minutes = long.Parse(input[1]);
+
+            long mDegree = minutes * 6;
+            long hDegree = hours * 30 + minutes / 2;
+
+            long degree1 = Math.Abs(mDegree - hDegree);
+            long degree2 = Math.Abs(mDegree - hDegree + 360);
+            long degree3 = Math.Abs(mDegree - hDegree - 360);
+
+            long answer = Math.Min(degree1, degree2);
+            answer = Math.Min(answer, degree3);
+
+            Console.WriteLine(answer);
         }
     }
 }
