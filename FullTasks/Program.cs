@@ -22,7 +22,8 @@ namespace FullTasks
             runMethod -= Equation2;
             runMethod -= ChickenAndEggs;
             //runMethod += Clocks;
-            runMethod += Clocks2Variand;
+            runMethod -= Clocks2Variand;
+            runMethod += LoveToNumbers;
 
             runMethod.Invoke();
 
@@ -294,6 +295,22 @@ namespace FullTasks
             answer = Math.Min(answer, degree3);
 
             Console.WriteLine(answer);
+        }
+
+        /// <summary>
+        /// Маленький мальчик очень любит цифры, они маленькие.
+        //А вот числа он не очень любит, потому что они большие.
+        //Поэтому когда он видит число, он сразу складывает его цифры.
+        //Если получается цифра, то он радуется, потому что она маленькая.
+        //А если нет, то очень огорчается и пробует снова. Пока не получится. 
+        //Помогите мальчику найти окончательную маленькую цифру и обрадоваться.
+
+        //Начальные данные: одно натуральное число.
+        //Вывод результата: одно натуральное число.
+        /// </summary>
+        private static void LoveToNumbers()
+        {
+
         }
     }
 }
