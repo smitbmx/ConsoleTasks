@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Math", "Math\Math.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FullTasks", "FullTasks\FullTasks.csproj", "{905C891D-0339-496C-B3DD-DAC9C1050CFB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConditionalOperator", "ConditionalOperator\ConditionalOperator.csproj", "{3932E47E-971D-4DAF-A64D-6799CB4A76C9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -67,6 +69,10 @@ Global
 		{905C891D-0339-496C-B3DD-DAC9C1050CFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{905C891D-0339-496C-B3DD-DAC9C1050CFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{905C891D-0339-496C-B3DD-DAC9C1050CFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3932E47E-971D-4DAF-A64D-6799CB4A76C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3932E47E-971D-4DAF-A64D-6799CB4A76C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3932E47E-971D-4DAF-A64D-6799CB4A76C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3932E47E-971D-4DAF-A64D-6799CB4A76C9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

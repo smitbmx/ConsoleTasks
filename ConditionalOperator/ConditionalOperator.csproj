@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>266cae9d-5ccf-443a-84b5-63b2492820c9</ProjectGuid>
+    <ProjectGuid>{3932E47E-971D-4DAF-A64D-6799CB4A76C9}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ConditionalOperator</RootNamespace>

@@ -310,7 +310,12 @@ namespace FullTasks
         /// </summary>
         private static void LoveToNumbers()
         {
+            long input = long.Parse(Console.ReadLine());
 
+            long ostatok = input % 9;
+
+            ostatok = ostatok == 0 ? 9 : ostatok;
+            Console.WriteLine(ostatok);
         }
     }
 }
