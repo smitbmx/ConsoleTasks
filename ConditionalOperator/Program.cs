@@ -53,5 +53,18 @@ namespace ConditionalOperator
             Console.WriteLine(bigger1);
             Console.WriteLine(bigger2);
         }
+
+        /// <summary>
+        /// Вводятся 2 числа. 
+        //Из большего отнять меньшее и записать результат.
+
+        //Начальные данные: два целых числа на одной строке через пробел.
+        //Диапазон значений: каждое число от -109 до 109.
+        //Вывод результата: одно число - найденная разность.
+        /// </summary>
+        private static void BigDifference()
+        {
+
+        }
     }
 }
