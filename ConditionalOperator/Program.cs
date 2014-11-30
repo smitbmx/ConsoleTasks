@@ -13,7 +13,8 @@ namespace ConditionalOperator
         {
             RunMethod runMethod = null;
             runMethod -= Stub;
-            runMethod += Maximum;
+            runMethod -= Maximum;
+            runMethod += BigDifference;
 
             runMethod.Invoke();
 
@@ -64,7 +65,21 @@ namespace ConditionalOperator
         /// </summary>
         private static void BigDifference()
         {
+            string[] input = Console.ReadLine().Split();
+            long first = long.Parse(input[0]);
+            long second = long.Parse(input[1]);
 
+            long bigger, smaller;
+            bigger = first > second ? first : second;
+            smaller = first > second ? second : first;
+
+            long res = bigger - smaller;
+            if (true)
+            {
+                
+            }
+
+            Console.WriteLine(res);
         }
     }
 }
