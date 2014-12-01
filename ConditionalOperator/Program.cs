@@ -14,7 +14,8 @@ namespace ConditionalOperator
             RunMethod runMethod = null;
             runMethod -= Stub;
             runMethod -= Maximum;
-            runMethod += BigDifference;
+            runMethod -= BigDifference;
+            runMethod += LessEqualMore;
 
             runMethod.Invoke();
 
@@ -76,9 +77,35 @@ namespace ConditionalOperator
             long res = bigger - smaller;
             if (true)
             {
-                
+
             }
 
+            Console.WriteLine(res);
+        }
+
+        /// <summary>
+        /// Вводятся 2 числа. Сравнить их.
+        //Вывести знак <, > или =.
+
+        //Начальные данные: два целых числа на одной строке через пробел.
+        //Диапазон значений: каждое число от -109 до 109.
+        //Вывод результата: знак <, > или =.
+        /// </summary>
+        private static void LessEqualMore()
+        {
+            string[] input = Console.ReadLine().Split();
+            long first = long.Parse(input[0]);
+            long second = long.Parse(input[1]);
+
+            string res = "=";
+            if (first > second)
+            {
+                res = ">";
+            }
+            if (first < second)
+            {
+                res = "<";
+            }
             Console.WriteLine(res);
         }
     }
