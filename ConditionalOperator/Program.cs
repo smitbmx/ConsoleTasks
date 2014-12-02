@@ -15,7 +15,8 @@ namespace ConditionalOperator
             runMethod -= Stub;
             runMethod -= Maximum;
             runMethod -= BigDifference;
-            runMethod += LessEqualMore;
+            runMethod -= LessEqualMore;
+            runMethod += ThreeNumbers;
 
             runMethod.Invoke();
 
@@ -107,6 +108,32 @@ namespace ConditionalOperator
                 res = "<";
             }
             Console.WriteLine(res);
+        }
+
+        /// <summary>
+        /// Вводятся 3 числа.
+        //Проверить равны ли они.
+        //Вывести 'YES' - если они равны, 'NO' - в противном случае.
+
+        //Начальные данные: три целых числа на одной строке через пробел.
+        //Диапазон значений: каждое число от -109 до 109.
+        //Вывод результата: YES или NO.
+        /// </summary>
+        private static void ThreeNumbers()
+        {
+            string[] input = Console.ReadLine().Split();
+            long first = long.Parse(input[0]);
+            long second = long.Parse(input[1]);
+            long third = long.Parse(input[2]);
+
+            if ((first == second) && (second == third))
+            {
+                Console.WriteLine("YES");
+            }
+            else
+            {
+                Console.WriteLine("NO");
+            }
         }
     }
 }
