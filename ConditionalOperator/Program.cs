@@ -16,7 +16,8 @@ namespace ConditionalOperator
             runMethod -= Maximum;
             runMethod -= BigDifference;
             runMethod -= LessEqualMore;
-            runMethod += ThreeNumbers;
+            runMethod -= ThreeNumbers;
+            runMethod += Module;
 
             runMethod.Invoke();
 
@@ -134,6 +135,28 @@ namespace ConditionalOperator
             {
                 Console.WriteLine("NO");
             }
+        }
+
+        /// <summary>
+        /// Дано число.
+        //Найти его модуль.
+
+        //Начальные данные: целое число.
+        //Диапазон значений: число от -1018 до 1018.
+        //Вывод результата: модуль числа.
+        //Обязательно:	if
+        //Запрещено:	Math
+        /// </summary>
+        private static void Module()
+        {
+            long input = long.Parse(Console.ReadLine());
+
+            if (input < 0)
+            {
+                input = -input;
+            }
+
+            Console.WriteLine(input);
         }
     }
 }
