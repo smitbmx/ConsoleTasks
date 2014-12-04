@@ -17,7 +17,8 @@ namespace ConditionalOperator
             runMethod -= BigDifference;
             runMethod -= LessEqualMore;
             runMethod -= ThreeNumbers;
-            runMethod += Module;
+            runMethod -= Module;
+            runMethod += SumOrMultiply;
 
             runMethod.Invoke();
 
@@ -157,6 +158,41 @@ namespace ConditionalOperator
             }
 
             Console.WriteLine(input);
+        }
+
+        /// <summary>
+        /// Вводятся 7 чисел. Что больше их сумма или произведение?
+        //Вывести "+" или "*". Если одинаковы, вывести "=".
+        //Начальные данные: семь целых чисел через пробел.
+        //Диапазон значений: каждое число от -1018 до 1018.
+        //Вывод результата: знак +, * или =.
+        /// </summary>
+        private static void SumOrMultiply()
+        {
+            string[] input = Console.ReadLine().Split();
+
+            long first = long.Parse(input[0]);
+            long second = long.Parse(input[1]);
+            long third = long.Parse(input[2]);
+            long fourth = long.Parse(input[3]);
+            long fifth = long.Parse(input[4]);
+            long sixth = long.Parse(input[5]);
+            long seventh = long.Parse(input[6]);
+
+            long sum = first + second + third + fourth + fifth + sixth + seventh;
+            long multiply = first * second * third * fourth * fifth * sixth * seventh;
+            string res = "=";
+
+            if (sum > multiply)
+            {
+                res = "+";
+            }
+            if (multiply > sum)
+            {
+                res = "*";
+            }
+
+            Console.WriteLine(res);
         }
     }
 }
