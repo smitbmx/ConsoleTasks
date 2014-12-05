@@ -18,7 +18,8 @@ namespace ConditionalOperator
             runMethod -= LessEqualMore;
             runMethod -= ThreeNumbers;
             runMethod -= Module;
-            runMethod += SumOrMultiply;
+            runMethod -= SumOrMultiply;
+            runMethod += EvenOrOdd;
 
             runMethod.Invoke();
 
@@ -192,6 +193,23 @@ namespace ConditionalOperator
                 res = "*";
             }
 
+            Console.WriteLine(res);
+        }
+
+        /// <summary>
+        /// Вводится 1 число.
+        //Умножить его на 2, если оно нечётное,
+        //или поделить его на 2, если оно чётное.
+
+        //Начальные данные: 1 число.
+        //Диапазон значений: число от -1018 до 1018.
+        //Вывод результата: 1 число - результат деления или умножения.
+        /// </summary>
+        private static void EvenOrOdd()
+        {
+            long input = long.Parse(Console.ReadLine());
+
+            long res = input % 2 == 0 ? input / 2 : input * 2;
             Console.WriteLine(res);
         }
     }
