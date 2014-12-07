@@ -21,7 +21,8 @@ namespace ConditionalOperator
             runMethod -= SumOrMultiply;
             runMethod -= EvenOrOdd;
             runMethod -= NineNumbers;
-            runMethod += NegativeCube;
+            runMethod -= NegativeCube;
+            runMethod += LastDigit;
 
             runMethod.Invoke();
 
@@ -255,6 +256,33 @@ namespace ConditionalOperator
             else
             {
                 Console.WriteLine(Math.Pow(input, 3));
+            }
+        }
+
+        /// <summary>
+        /// Даны два целых числа.
+        //Верно ли, что они заканчиваются на одну и ту же цифру?
+        //Напечатать YES, если это так, и NO, если это не так.
+
+        //Начальные данные: 2 числа на двух строках.
+        //Диапазон значений: каждое число от -1018 до 1018.
+        //Вывод результата: надпись YES или NO.
+        /// </summary>
+        private static void LastDigit()
+        {
+            string first = Console.ReadLine();
+            string second = Console.ReadLine();
+
+            int ff = int.Parse(first[first.Length - 1].ToString());
+            int ss = int.Parse(second[second.Length - 1].ToString());
+
+            if (ff == ss)
+            {
+                Console.WriteLine("YES");
+            }
+            else
+            {
+                Console.WriteLine("NO");
             }
         }
     }
