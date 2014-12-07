@@ -20,7 +20,8 @@ namespace ConditionalOperator
             runMethod -= Module;
             runMethod -= SumOrMultiply;
             runMethod -= EvenOrOdd;
-            runMethod += NineNumbers;
+            runMethod -= NineNumbers;
+            runMethod += NegativeCube;
 
             runMethod.Invoke();
 
@@ -234,6 +235,27 @@ namespace ConditionalOperator
             if (long.Parse(input[6]) < 0) { Console.WriteLine(input[6]); }
             if (long.Parse(input[7]) < 0) { Console.WriteLine(input[7]); }
             if (long.Parse(input[8]) < 0) { Console.WriteLine(input[8]); }
+        }
+
+        /// <summary>
+        /// Вводится отрицательное число, возвести его в куб.
+        //Если оно неотрицательное, вывести надпись ERROR.
+        //Начальные данные: 1 число.
+        //Диапазон значений: число от -1018 до 1018.
+        //Вывод результата: 1 число либо надпись ERROR.
+        /// </summary>
+        private static void NegativeCube()
+        {
+            long input = long.Parse(Console.ReadLine());
+
+            if (input >= 0)
+            {
+                Console.WriteLine("ERROR");
+            }
+            else
+            {
+                Console.WriteLine(Math.Pow(input, 3));
+            }
         }
     }
 }
