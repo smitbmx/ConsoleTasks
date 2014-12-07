@@ -19,7 +19,8 @@ namespace ConditionalOperator
             runMethod -= ThreeNumbers;
             runMethod -= Module;
             runMethod -= SumOrMultiply;
-            runMethod += EvenOrOdd;
+            runMethod -= EvenOrOdd;
+            runMethod += NineNumbers;
 
             runMethod.Invoke();
 
@@ -211,6 +212,28 @@ namespace ConditionalOperator
 
             long res = input % 2 == 0 ? input / 2 : input * 2;
             Console.WriteLine(res);
+        }
+
+        /// <summary>
+        /// Вводятся 9 чисел.
+        //Вывести в столбец только отрицательные.
+        //Начальные данные: 9 чисел на одной строке через пробел.
+        //Диапазон значений: каждое число от -109 до 109.
+        //Вывод результата: отрицательные числа в столбец.
+        /// </summary>
+        private static void NineNumbers()
+        {
+            string[] input = Console.ReadLine().Split();
+
+            if (long.Parse(input[0]) < 0) { Console.WriteLine(input[0]); }
+            if (long.Parse(input[1]) < 0) { Console.WriteLine(input[1]); }
+            if (long.Parse(input[2]) < 0) { Console.WriteLine(input[2]); }
+            if (long.Parse(input[3]) < 0) { Console.WriteLine(input[3]); }
+            if (long.Parse(input[4]) < 0) { Console.WriteLine(input[4]); }
+            if (long.Parse(input[5]) < 0) { Console.WriteLine(input[5]); }
+            if (long.Parse(input[6]) < 0) { Console.WriteLine(input[6]); }
+            if (long.Parse(input[7]) < 0) { Console.WriteLine(input[7]); }
+            if (long.Parse(input[8]) < 0) { Console.WriteLine(input[8]); }
         }
     }
 }
