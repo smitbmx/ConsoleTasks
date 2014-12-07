@@ -22,7 +22,8 @@ namespace ConditionalOperator
             runMethod -= EvenOrOdd;
             runMethod -= NineNumbers;
             runMethod -= NegativeCube;
-            runMethod += LastDigit;
+            runMethod -= LastDigit;
+            runMethod += ThreeMaxs;
 
             runMethod.Invoke();
 
@@ -284,6 +285,52 @@ namespace ConditionalOperator
             {
                 Console.WriteLine("NO");
             }
+        }
+
+        /// <summary>
+        /// Даны 3 целых числа. Вывести наибольшее из них.
+        //Начальные данные: 3 целых числах на одной строке через пробел.
+        //Диапазон значений: каждое число от -109 до 109.
+        //Вывод результата: 1 число.
+        /// </summary>
+        private static void ThreeMaxs()
+        {
+            string[] input = Console.ReadLine().Split();
+
+            int first = int.Parse(input[0]);
+            int second = int.Parse(input[1]);
+            int third = int.Parse(input[2]);
+
+            int biggest = 0, biggest12 = 0, biggest23 = 0;
+
+            if (first > second)
+            {
+                biggest12 = first;
+            }
+            else
+            {
+                biggest12 = second;
+            }
+
+            if (second > third)
+            {
+                biggest23 = second;
+            }
+            else
+            {
+                biggest23 = third;
+            }
+
+            if (biggest12 > biggest23)
+            {
+                biggest = biggest12;
+            }
+            else
+            {
+                biggest = biggest23;
+            }
+
+            Console.WriteLine(biggest);
         }
     }
 }
