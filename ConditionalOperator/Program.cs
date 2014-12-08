@@ -23,7 +23,8 @@ namespace ConditionalOperator
             runMethod -= NineNumbers;
             runMethod -= NegativeCube;
             runMethod -= LastDigit;
-            runMethod += ThreeMaxs;
+            runMethod -= ThreeMaxs;
+            runMethod += ABBA;
 
             runMethod.Invoke();
 
@@ -331,6 +332,34 @@ namespace ConditionalOperator
             }
 
             Console.WriteLine(biggest);
+        }
+
+        /// <summary>
+        /// Дано 4-значное число.
+        //Верно ли, что сумма двух крайних цифр равна сумме двух средних? 
+        //Напечатать YES, если это так, и NO, если это не так.
+        //Начальные данные: 4-значное число.
+        //Вывод результата: надпись YES или NO.
+        /// </summary>
+        private static void ABBA()
+        {
+            string input = Console.ReadLine();
+            long first = long.Parse(input[0].ToString());
+            long second = long.Parse(input[1].ToString());
+            long third = long.Parse(input[2].ToString());
+            long fourth = long.Parse(input[3].ToString());
+
+            long firstPair = first + fourth;
+            long secondPair = second + third;
+
+            if (firstPair == secondPair)
+            {
+                Console.WriteLine("YES");
+            }
+            else
+            {
+                Console.WriteLine("NO");
+            }
         }
     }
 }
