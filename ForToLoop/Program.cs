@@ -14,7 +14,8 @@ namespace ForToLoop
             RunMethod runMethod = Stub;
             runMethod -= Stars;
             runMethod -= ThreeDigitNumbers;
-            runMethod += TwoDigitNumbers;
+            runMethod -= TwoDigitNumbers;
+            runMethod += Rombs;
 
             runMethod.Invoke();
 
@@ -55,6 +56,34 @@ namespace ForToLoop
             {
                 Console.WriteLine(i);
             }
+        }
+
+        /// <summary>
+        /// Дано число N.
+        //Вывести на экран N ромбиков в ряд.
+        //Каждый ромбик состоит из 4 символов, размещённых на двух строчках:
+        ///\
+        //\/
+        //Начальные данные: нет.
+        //Вывод результата: N ромбиков на двух строчках
+        /// </summary>
+        private static void Rombs()
+        {
+            int N = int.Parse(Console.ReadLine());
+
+            for (int i = 0; i < N; i++)
+            {
+                Console.Write("/\\");
+            }
+
+            Console.WriteLine();
+
+            for (int i = 0; i < N; i++)
+            {
+                Console.Write("\\/");
+            }
+
+            Console.WriteLine();
         }
     }
 }
