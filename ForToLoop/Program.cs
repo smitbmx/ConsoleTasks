@@ -17,7 +17,8 @@ namespace ForToLoop
             runMethod -= TwoDigitNumbers;
             runMethod -= Rombs;
             runMethod -= Squares;
-            runMethod += Alphabet;
+            runMethod -= Alphabet;
+            runMethod += MultipliesNumbers;
 
             runMethod.Invoke();
 
@@ -115,6 +116,26 @@ namespace ForToLoop
             }
 
             Console.WriteLine();
+        }
+
+        /// <summary>
+        /// Дано натуральное число N.
+        //Вывести все трёхзначные числа, кратные этому числу, в столбик.
+        //Решить программу без использования условного оператора if.
+        //Начальные данные: нет.
+        //Вывод результата: трёхзначные числа столбиком.
+        /// </summary>
+        private static void MultipliesNumbers()
+        {
+            int N = int.Parse(Console.ReadLine());
+            int k;
+
+            for (k = N; k < 100; k += N)
+            {}
+            for (; k <= 999; k += N)
+            {
+                Console.WriteLine(k);
+            }
         }
     }
 }
