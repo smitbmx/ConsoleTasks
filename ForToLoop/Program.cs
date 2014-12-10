@@ -16,7 +16,8 @@ namespace ForToLoop
             runMethod -= ThreeDigitNumbers;
             runMethod -= TwoDigitNumbers;
             runMethod -= Rombs;
-            runMethod += Squares;
+            runMethod -= Squares;
+            runMethod += Alphabet;
 
             runMethod.Invoke();
 
@@ -98,6 +99,22 @@ namespace ForToLoop
             {
                 Console.WriteLine(Math.Pow(i, 2));
             }
+        }
+
+        /// <summary>
+        /// Вывести в строчку английский алфавит от A до Z.
+        //Подсказка: используйте для цикла переменную типа char.
+        //Начальные данные: нет.
+        //Вывод результата: 26 букв английского алфавита на одной строке.
+        /// </summary>
+        private static void Alphabet()
+        {
+            for (char i = 'A'; i <= 'Z'; i++)
+            {
+                Console.Write(i);
+            }
+
+            Console.WriteLine();
         }
     }
 }
