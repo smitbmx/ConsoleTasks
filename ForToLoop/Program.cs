@@ -15,7 +15,8 @@ namespace ForToLoop
             runMethod -= Stars;
             runMethod -= ThreeDigitNumbers;
             runMethod -= TwoDigitNumbers;
-            runMethod += Rombs;
+            runMethod -= Rombs;
+            runMethod += Squares;
 
             runMethod.Invoke();
 
@@ -84,6 +85,19 @@ namespace ForToLoop
             }
 
             Console.WriteLine();
+        }
+
+        /// <summary>
+        /// Для каждого числа от 1 до 100 вычислить квадрат и вывести их столбиком.
+        //Начальные данные: нет.
+        //Вывод результата: 100 чисел на 100 строчках.
+        /// </summary>
+        private static void Squares()
+        {
+            for (int i = 1; i <= 100; i++)
+            {
+                Console.WriteLine(Math.Pow(i, 2));
+            }
         }
     }
 }
