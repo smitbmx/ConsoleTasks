@@ -18,7 +18,8 @@ namespace ForToLoop
             runMethod -= Rombs;
             runMethod -= Squares;
             runMethod -= Alphabet;
-            runMethod += MultipliesNumbers;
+            runMethod -= MultipliesNumbers;
+            runMethod += QuadroLoop;
 
             runMethod.Invoke();
 
@@ -131,10 +132,34 @@ namespace ForToLoop
             int k;
 
             for (k = N; k < 100; k += N)
-            {}
+            { }
             for (; k <= 999; k += N)
             {
                 Console.WriteLine(k);
+            }
+        }
+
+        /// <summary>
+        /// Дано два натуральных числа, a и b.
+        //Вывести все числа от a до b,
+        //которые являются точными квадратами.
+        //Начальные данные: два натуральных числа на двух строчках.
+        //Вывод результата: точные квадраты столбиком.
+        /// </summary>
+        private static void QuadroLoop()
+        {
+            long a = long.Parse(Console.ReadLine());
+            long b = long.Parse(Console.ReadLine());
+
+            long aS = (long)Math.Sqrt(a);
+            long bS = (long)Math.Sqrt(b);
+
+            aS = aS*aS >= a ? aS : aS + 1;
+
+            for (long i = aS; i <= bS; i++)
+            {
+                long quadro = i * i;
+                Console.WriteLine(quadro);
             }
         }
     }
