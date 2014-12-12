@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConditionalOperator", "Cond
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForToLoop", "ForToLoop\ForToLoop.csproj", "{6432FC1B-80F0-4E88-AB08-E9340808A827}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WhileLoop", "WhileLoop\WhileLoop.csproj", "{20FCCC3A-0A4B-40B1-B451-A42D3C93B473}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -79,6 +81,10 @@ Global
 		{6432FC1B-80F0-4E88-AB08-E9340808A827}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6432FC1B-80F0-4E88-AB08-E9340808A827}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6432FC1B-80F0-4E88-AB08-E9340808A827}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20FCCC3A-0A4B-40B1-B451-A42D3C93B473}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20FCCC3A-0A4B-40B1-B451-A42D3C93B473}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20FCCC3A-0A4B-40B1-B451-A42D3C93B473}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20FCCC3A-0A4B-40B1-B451-A42D3C93B473}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
