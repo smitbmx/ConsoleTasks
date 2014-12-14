@@ -12,7 +12,8 @@ namespace WhileLoop
         static void Main(string[] args)
         {
             RunMethod runMethod = Stub;
-            runMethod += AllNumbers;
+            runMethod -= AllNumbers;
+            runMethod += NegativeNumbers;
 
             runMethod.Invoke();
 
@@ -30,6 +31,16 @@ namespace WhileLoop
             {
                 Console.WriteLine(i);
                 i++;
+            }
+        }
+
+        private static void NegativeNumbers()
+        {
+            int i = -10;
+            while (i >= -99)
+            {
+                Console.WriteLine(i);
+                i--;
             }
         }
     }
